@@ -8,21 +8,6 @@ void function(){
 
     // Вызов функции counter должен создавать независимый счетчик – это значит, что вызов методов одного счетчика никак не должен влиять на любой другой счетчик.
 
-    // function counter(){
-    //     let count=0;
-
-    //     function increase(){
-    //         count++;
-    //     };
-    //     function decrease(){
-    //         count--;
-    //     };
-    //     function value(){
-    //         return count;
-    //     };
-    //     return {increase, decrease,value}
-    // }
-
     const counter=()=>{
         let count=0;
         const increase=()=>count++;
@@ -33,7 +18,9 @@ void function(){
 
     let dogCount=counter();
     let catCount=counter();
-
+    
+    // пробуем:
+    
     dogCount.increase();
     dogCount.increase();
     dogCount.increase();
